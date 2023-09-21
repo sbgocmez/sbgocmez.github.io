@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Database Project</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style2.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style3.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style4.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styleh1.css') }}"
+    />
+
+    <script src="{{url_for('static', filename='js/track.js')}}"></script>
+    <script>
+      trackPageview();
+      trackUserLocation();
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="menu">
+          <h3 class="logo">DB<span>Project</span></h3>
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="main">
+          <header>
+            <body>
+              <section id="section-1">
+                <img
+                  style="
+                    background-color: transparent;
+                    max-height: 100%;
+                    max-width: 100%;
+                    width: auto;
+                    height: auto;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                  "
+                  src="static/photo/Group.png"
+                  alt=""
+                />
+                <h1
+                  style="position: absolute; margin: 150px; margin-left: 370px"
+                >
+                  Animal Crossing New Horizons
+                </h1>
+              </section>
+            </body>
+          </header>
+        </div>
+
+        <div class="shadow one"></div>
+        <div class="shadow two"></div>
+      </div>
+    </div>
+
+    <script src="{{url_for('static', filename='css/app.js')}}"></script>
+    <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+  </body>
+</html>
