@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -14,7 +15,7 @@
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
-    
+
     <!-- Include JavaScript file -->
     <script src="static/js/track.js"></script>
     <!-- <link
@@ -40,29 +41,29 @@
 
     <script src="{{url_for('static', filename='js/track.js')}}"></script> -->
     <script>
-      trackPageview();
-      trackUserLocation();
+        trackPageview();
+        trackUserLocation();
     </script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container">
-      <div class="navbar">
-        <div class="menu">
-          <h3 class="logo">DB<span>Project</span></h3>
-          <div class="hamburger-menu">
-            <div class="bar"></div>
-          </div>
+        <div class="navbar">
+            <div class="menu">
+                <h3 class="logo">DB<span>Project</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="main-container">
-        <div class="main">
-          <header>
-            <body>
-              <section id="section-1">
-                <img
-                  style="
+        <div class="main-container">
+            <div class="main">
+                <header>
+
+                    <body>
+                        <section id="section-1">
+                            <img style="
                     background-color: transparent;
                     max-height: 100%;
                     max-width: 100%;
@@ -74,31 +75,27 @@
                     left: 0;
                     right: 0;
                     margin: auto;
-                  "
-                  src="static/photo/Group.png"
-                  alt=""
-                />
-                <h1
-                  style="position: absolute; margin: 150px; margin-left: 370px"
-                >
-                  Animal Crossing New Horizons - 2
-                </h1>
+                  " src="static/photo/Group.png" alt="" />
+                            <h1 style="position: absolute; margin: 150px; margin-left: 370px">
+                                Animal Crossing New Horizons - 2
+                            </h1>
 
-                <!-- Button to go to the 'about.html' page -->
-                <a href="about.html">
-                  <button>Go to About Page</button>
-                </a>
-              </section>
-            </body>
-          </header>
+                            <!-- Button to go to the 'about.html' page -->
+                            <a href="about.html">
+                                <button>Go to About Page</button>
+                            </a>
+                        </section>
+                    </body>
+                </header>
+            </div>
+
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
         </div>
-
-        <div class="shadow one"></div>
-        <div class="shadow two"></div>
-      </div>
     </div>
 
     <script src="{{url_for('static', filename='css/app.js')}}"></script>
     <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
-  </body>
+</body>
+
 </html>
