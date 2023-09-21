@@ -1,5 +1,50 @@
 // tracking.js
+//const XLSX = require('xlsx');
+//XLSX.utils
 
+function trackEverything() {
+    userAgent = navigator.userAgent;
+    userAgentData = navigator.userAgentData;
+    pageview = 1;
+    location = document.location;
+
+    const XLSX = require('xlsx');
+
+// Create an array of data (each element represents a row)
+const data = [
+  ['Header 1', 'Header 2', 'Header 3'],
+  [userAgent, userAgentData, pageview, location],
+  //['More Data 1', 'More Data 2', 'More Data 3'],
+  // Add more rows as needed
+];
+
+// Create a new workbook and add a worksheet
+const workbook = XLSX.utils.book_new();
+const worksheet = XLSX.utils.aoa_to_sheet(data); // Use aoa_to_sheet for an array of arrays
+
+// Add the worksheet to the workbook
+XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+
+// Create a blob from the workbook
+const blob = XLSX.write(workbook, { bookType: 'xlsx', type: 'blob' });
+
+// Create a URL for the blob
+const url = URL.createObjectURL(blob);
+
+// Create a link to download the file
+const a = document.createElement('a');
+a.href = url;
+const name = navigator.userAgentData.platform;
+a.download = String(name);
+
+// Trigger a click event to start the download
+a.click();
+
+// Clean up the URL and remove the link
+URL.revokeObjectURL(url);
+
+
+}
 // Function to send tracking data to your backend
 function sendTrackingData(data) {
     // Send data to your backend using an AJAX request or other methods
