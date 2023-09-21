@@ -15,6 +15,7 @@ function sendTrackingData(data) {
         // Handle the response, e.g., log success or handle errors
         console.log('Tracking data sent successfully');
         console.log(data);
+        console.log(body)
     })
     .catch(error => {
         console.error('Error sending tracking data:', error);
@@ -59,6 +60,7 @@ function trackUserAgent()
         data: navigator.userAgent
     };
     sendUserAgent(data)
+
 }
 
 // Track user interactions or custom events as needed
