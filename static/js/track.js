@@ -50,6 +50,7 @@ function sendUserAgent(data)
 {
     console.log("-- user agent --");
     console.log(data);
+    console.log(navigator.userAgentData);
 }
 function trackUserAgent()
 {
