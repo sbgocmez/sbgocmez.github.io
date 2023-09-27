@@ -13,10 +13,9 @@ function trackEverything() {
     console.log("my dataa")
     console.log(data)
 
-
-    fetch('/https://fastapi-busra-736f01987e01.herokuapp.com/clients', {
+    fetch('https://fastapi-busra-736f01987e01.herokuapp.com/clients', {
         method: 'POST',
-        body: JSON.stringify(data),
+        body: data,
         headers: {
             'Content-Type': 'application/json'
         }
