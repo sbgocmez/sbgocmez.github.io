@@ -1,6 +1,6 @@
 
 
-function trackEverything() {
+async function trackEverything() {
     var platform = navigator.userAgentData.platform
     var device = navigator.userAgentData.mobile === true ? "mobile" : "desktop";
     var language = navigator.language
