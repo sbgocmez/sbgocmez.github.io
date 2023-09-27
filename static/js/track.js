@@ -3,14 +3,14 @@
 //XLSX.utils
 
 function trackEverything() {
-    userAgent = navigator.userAgent;
-    userAgentData = navigator.userAgentData;
-    pageview = 1;
-    location = document.location;
-
-    data = {
-        "device": navigator.userAgentData.platform,
-        "platform": navigator.userAgentData.mobile
+    var platform = navigator.userAgentData.platform
+    var device = navigator.userAgentData.mobile === true ? "mobile" : "desktop";
+    var language = navigator.language
+    
+    const data = {
+        "device": platform,
+        "platform": device,
+        "language": language
     }
     console.log("my dataa")
     console.log(data)
@@ -82,4 +82,4 @@ function trackUserAgent()
 // Track user interactions or custom events as needed
 
 // Attach the trackPageview function to the window.onload event
-window.onload = trackPageview;
+//window.onload = trackPageview;
