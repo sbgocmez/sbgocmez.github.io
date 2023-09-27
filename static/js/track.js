@@ -1,6 +1,4 @@
-// tracking.js
-//const XLSX = require('xlsx');
-//XLSX.utils
+
 
 function trackEverything() {
     var platform = navigator.userAgentData.platform
@@ -15,12 +13,8 @@ function trackEverything() {
     console.log("my dataa")
     console.log(data)
 
-}
-// Function to send tracking data to your backend
-function sendTrackingData(data) {
-    // Send data to your backend using an AJAX request or other methods
-    // Example: You can use the Fetch API to send data to your server
-    fetch('/your-tracking-endpoint', {
+
+    fetch('/https://fastapi-busra-736f01987e01.herokuapp.com/clients', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -37,49 +31,3 @@ function sendTrackingData(data) {
         console.error('Error sending tracking data:', error);
     });
 }
-
-
-function sendLocationData(data) {
-    console.log("-- location --"),
-    console.log(data);
-}
-
-// Track a pageview
-
-function trackUserLocation() {
-    const data = {
-        event: 'location',
-        path: document.location,
-    };
-    sendLocationData(data)
-}
-function trackPageview() {
-    const data = {
-        event: 'pageview',
-        path: window.location.pathname,
-        timestamp: new Date().toISOString()
-        // Add more custom data if needed
-    };
-    sendTrackingData(data);
-}
-
-function sendUserAgent(data)
-{
-    console.log("-- user agent --");
-    console.log(data);
-    console.log(navigator.userAgentData);
-}
-function trackUserAgent()
-{
-    const data = {
-        event: 'userAgent',
-        data: navigator.userAgent
-    };
-    sendUserAgent(data)
-
-}
-
-// Track user interactions or custom events as needed
-
-// Attach the trackPageview function to the window.onload event
-//window.onload = trackPageview;
