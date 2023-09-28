@@ -44,12 +44,7 @@ async function trackEverything() {
     }
     console.log("my dataa")
     console.log(data)
-    }
 
-    // constructed data for apple products
-    else {
-        const data = returned_data
-    }
     fetch('https://fastapi-busra-736f01987e01.herokuapp.com/clients', {
         method: 'POST',
         body: JSON.stringify(data),
@@ -66,6 +61,29 @@ async function trackEverything() {
     .catch(error => {
         console.error('Error sending tracking data:', error);
     });
+    }
+
+    // constructed data for apple products
+    else {
+        const data = returned_data
+        fetch('https://fastapi-busra-736f01987e01.herokuapp.com/clients', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        // Handle the response, e.g., log success or handle errors
+        console.log('Tracking data sent successfully');
+        console.log(data);
+        console.log(body)
+    })
+    .catch(error => {
+        console.error('Error sending tracking data:', error);
+    });
+    }
+    
 }
 
 async function myfunct(){
