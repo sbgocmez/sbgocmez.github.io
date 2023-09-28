@@ -73,7 +73,7 @@ async function trackEverything() {
 
         var language = navigator.language
 
-        if (is_Mac) {
+        if (!is_iPhone) {
             const apple_data = {
             "device": "desktop",
             "platform": "MacOS",
