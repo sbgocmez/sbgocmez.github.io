@@ -1,6 +1,6 @@
 
 
-async function trackApple() {
+function trackApple() {
     var is_apple = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
     var is_iOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
 
@@ -29,7 +29,7 @@ async function trackApple() {
 
 async function trackEverything() {
 
-    var returned_data = trackApple()
+    const returned_data = trackApple()
 
     if (returned_data == null) {
     var platform = navigator.userAgentData.platform
@@ -48,7 +48,7 @@ async function trackEverything() {
 
     // constructed data for apple products
     else {
-        var data = returned_data
+        const data = returned_data
     }
     fetch('https://fastapi-busra-736f01987e01.herokuapp.com/clients', {
         method: 'POST',
@@ -66,4 +66,9 @@ async function trackEverything() {
     .catch(error => {
         console.error('Error sending tracking data:', error);
     });
+}
+
+async function myfunct(){
+    var data2 = trackApple()
+    console.log(data2)
 }
