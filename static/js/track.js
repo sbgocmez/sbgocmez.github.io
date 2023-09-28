@@ -1,6 +1,6 @@
 
 
-function trackApple() {
+async function trackApple() {
     var is_apple = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
     var is_iOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
 
