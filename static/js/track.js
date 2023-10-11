@@ -40,8 +40,8 @@ async function trackEverything() {
     
     // construct the data
     const data = {
-        "device": platform,
-        "platform": device,
+        "device": device,
+        "platform": platform,
         "language": language
     }
     console.log("my dataa")
